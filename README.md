@@ -14,3 +14,8 @@ Making use of the model we found some errors within the process of results in th
 
 Having the grouping of the data, definition of the problem we looked for a suitable model to the solution of this problem which is in beta phase to recognize if it works correctly in front of the problem in order to make feedback since it was one of the several problems that we had when making this model.
 
+## Code used
+## Repository Structure
+
+
+This project was developed by Juan David Quiroga, Sebastián Villarreal Castro, Jan Henrik Sánchez Jerez as part of the Systems Analysis course - Workshop 1.
