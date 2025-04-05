@@ -1,8 +1,13 @@
-# System Analysis
+## Welcome to workshop systems analysis
 
-## Team members:
-- Juan David Quiroga - 20222020206
-- Sebastián Villarreal Castro - 20221020059
-- Jan Henrik Sánchez Jerez - 20231020130
+Welcome to this work area of the systems analysis subject, in this repository you will find the respective activities or workshops, this work area is part of this group conformed by 
 
-This is the repository of the System Analysis classes
+## Group
+- Jan Henrik Sánchez Jerez - 20231020130 
+- Sebastián Villarreal Castro - 20221020059 
+- Juan David Quiroga - 20222020206 
+
+## Index
+- Workshop 1
+-
+-
