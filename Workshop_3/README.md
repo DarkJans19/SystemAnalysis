@@ -13,7 +13,6 @@ El objetivo es transformar datos crudos de jóvenes en predicciones listas para 
 - `data/`: Archivos de datos originales (`train.csv`, `test.csv`, etc.) y diccionario de variables.
 - `src/`: Scripts de procesamiento, modelado y utilidades.
 - `outputs/`: Resultados y archivos de predicción (`submission.csv`).
-- `workshop3_analysis.ipynb`: Análisis exploratorio (opcional).
 - `informe_workshop3.md`: Informe formal del Workshop 3.
 
 ---
@@ -104,6 +103,7 @@ seaborn
 
 ---
 
-## Contacto
-
-Para dudas o mejoras, contacta al autor del repositorio o revisa la documentación en los scripts fuente.
+## Group
+- **Jan Henrik Sánchez Jerez** – 20231020130  
+- **Sebastián Villarreal Castro** – 20221020059  
+- **Juan David Quiroga** – 20222020206
