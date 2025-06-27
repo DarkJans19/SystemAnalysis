@@ -1,26 +1,26 @@
 # Workshop 3: Problematic Internet Use Prediction
 
-## Descripción
+## Description
 
-Este proyecto implementa un sistema de predicción ordinal para el Severely Impairment Index (SII), siguiendo el flujo de trabajo propuesto en la competencia de Kaggle ["Child Mind Institute - Problematic Internet Use"](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/overview).
+This project implements an ordinal prediction system for the Severely Impairment Index (SII), following the workflow proposed in the Kaggle competition ["Child Mind Institute - Problematic Internet Use"](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/overview).
 
-El objetivo es transformar datos crudos de jóvenes en predicciones listas para ser evaluadas, utilizando técnicas de preprocesamiento, ingeniería de features y modelos de machine learning.
-
----
-
-## Estructura de carpetas
-
-- `data/`: Archivos de datos originales (`train.csv`, `test.csv`, etc.) y diccionario de variables.
-- `src/`: Scripts de procesamiento, modelado y utilidades.
-- `outputs/`: Resultados y archivos de predicción (`submission.csv`).
-- `informe_workshop3.md`: Informe formal del Workshop 3.
+The goal is to transform raw data from adolescents into ready-to-evaluate predictions using preprocessing techniques, feature engineering, and machine learning models.
 
 ---
 
-## Instalación de dependencias
+## Folder Structure
 
-Asegúrate de tener Python 3.7+ instalado.  
-Instala las dependencias ejecutando:
+- `data/`: Original data files (`train.csv`, `test.csv`, etc.) and variable dictionary.
+- `src/`: Scripts for processing, modeling, and utilities.
+- `outputs/`: Results and prediction files (`submission.csv`).
+- `informe_workshop3.md`: Formal report for Workshop 3.
+
+---
+
+## Dependency Installation
+
+Make sure you have Python 3.7+ installed.  
+Install the dependencies by running:
 
 ```
 pip install -r requirements.txt
@@ -28,46 +28,49 @@ pip install -r requirements.txt
 
 ---
 
-## Ejecución del pipeline
+## Pipeline Execution
 
-1. **Coloca los archivos de datos** (`train.csv`, `test.csv`) en la carpeta `data/`.
-2. **Ejecuta el script principal** desde la raíz del proyecto:
+1. **Place the data files** (`train.csv`, `test.csv`) in the `data/` folder.
+2. **Run the main script** from the project root:
 
    ```
    python src/main.py
    ```
 
-3. **Resultado:**  
-   Se generará el archivo de predicciones `submission.csv` en la carpeta `outputs/`, listo para subir a Kaggle.
+
+3. **Result:**  
+The prediction file `submission.csv` will be generated in the `outputs/` folder, ready to be submitted to Kaggle.
 
 ---
 
-## Flujo del sistema
+## System Workflow
 
-El sistema sigue este flujo:
+The system follows this workflow:
 
-1. **Carga de datos:**  
-   Se leen los archivos de datos y se extraen las variables relevantes.
+1. **Data Loading:**  
+Reads the data files and extracts the relevant variables.
 
-2. **Preprocesamiento:**  
-   - Imputación de valores faltantes (media).
-   - Codificación de variables categóricas (por ejemplo, sexo).
-   - Selección de features numéricas presentes en ambos conjuntos.
+2. **Preprocessing:**  
+- Missing value imputation (mean).
+- Categorical variable encoding (e.g., sex).
+- Selection of numerical features present in both sets.
 
-3. **Agrupamiento de la variable objetivo:**  
-   La variable `PCIAT-PCIAT_Total` se agrupa en 4 categorías ordinales (0, 1, 2, 3) usando cuartiles, para cumplir con la naturaleza ordinal del problema.
+3. **Target Variable Grouping:**  
+The `PCIAT-PCIAT_Total` variable is grouped into 4 ordinal categories (0, 1, 2, 3) using quartiles, to match the ordinal nature of the problem.
 
-4. **Entrenamiento y validación:**  
-   Se entrena un modelo Random Forest y se valida usando la métrica Quadratic Weighted Kappa (QWK), que es la métrica oficial de la competencia.
+4. **Training and Validation:**  
+A Random Forest model is trained and validated using the Quadratic Weighted Kappa (QWK) metric, the official metric for the competition.
 
-5. **Predicción y generación de submission:**  
-   Se generan las predicciones para el conjunto de test y se guardan en el formato requerido (`id,sii`).
+5. **Prediction and Submission Generation:**  
+Predictions for the test set are generated and saved in the required format (`id,sii`).
 
 ---
 
-## Formato de submission
+## Submission Format
 
-El archivo `outputs/submission.csv` tendrá el siguiente formato:
+The `outputs/submission.csv` file will have the following format:
+
+---
 
 ```
 id,sii
@@ -76,14 +79,14 @@ id,sii
 ...
 ```
 
-- `id`: Identificador de cada muestra del test.
-- `sii`: Predicción ordinal para SII (valores de 0 a 3).
+- `id`: Identifier of each test sample.
+- `sii`: Ordinal prediction for SII (values from 0 to 3).
 
 ---
 
-## Requisitos
+## Requirements
 
-El archivo `requirements.txt` incluye:
+The `requirements.txt` file includes:
 
 ```
 pandas
@@ -96,10 +99,9 @@ seaborn
 
 ---
 
-## Referencias
+## References
 
-- [Competencia Kaggle](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/overview)
-- Workshops anteriores (ver documentación adjunta)
+- [Kaggle Competition](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use/overview)
 
 ---
 
