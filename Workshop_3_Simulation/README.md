@@ -107,5 +107,4 @@ seaborn
 
 ## Group
 - **Jan Henrik Sánchez Jerez** – 20231020130  
-- **Sebastián Villarreal Castro** – 20221020059  
 - **Juan David Quiroga** – 20222020206
