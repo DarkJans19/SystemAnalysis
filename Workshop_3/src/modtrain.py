@@ -1,7 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
-import numpy as np
 
 '''
 Este módulo contiene la función para entrenar y validar el modelo de machine learning

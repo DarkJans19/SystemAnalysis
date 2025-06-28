@@ -20,8 +20,8 @@ def preprocess(train, test):
     common_num_cols = [col for col in num_cols if col in test.columns]
     
     # Imputamos valores faltantes con la media del train (simil a rellenar huecos en una pared antes de pintar)
-    train[common_num_cols] = train[common_num_cols].fillna(train[common_num_cols].mean())
-    test[common_num_cols] = test[common_num_cols].fillna(train[common_num_cols].mean())
+    train[common_num_cols] = train[common_num_cols].fillna(train[common_num_cols].median())
+    test[common_num_cols] = test[common_num_cols].fillna(train[common_num_cols].median())
     
     # Codificamos la variable de sexo si está presente en ambos conjuntos
     if 'Basic_Demos-Sex' in train.columns and 'Basic_Demos-Sex' in test.columns:
